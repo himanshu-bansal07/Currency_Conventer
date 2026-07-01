@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: radial-gradient(circle at top, #1d4ed8 0%, #0f172a 55%, #020617 100%);
+    color: #e2e8f0;
+}
+
+.auth-shell {
+    width: min(100%, 460px);
+}
+
+.auth-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 32px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 24px 60px rgba(2, 6, 23, 0.35);
+}
+
+.brand-badge {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.auth-panel h1 {
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(15, 23, 42, 0.6);
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #94a3b8;
+}
+
+.input-group input:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.24);
+}
+
+button {
+    width: 100%;
+    padding: 13px 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.25);
+}
+
+#message {
+    min-height: 20px;
+    text-align: center;
+    margin-top: 6px;
+    color: #fda4af;
+    font-weight: 600;
+}
+
+@media (max-width: 450px) {
+    .auth-panel {
+        padding: 24px;
+    }
+}
